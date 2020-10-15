@@ -15,15 +15,15 @@ int main(void) {
 
     int result_value =
         search(0, limit_weight, v, w, num, limit_weight, searchedData);
-    printf("%d\n", result_value);
+    printf("合計金額%d円\n", result_value);
 
     for (i = 0; i < num; i++) {
         if (searchedData[i][limit_weight] !=
             searchedData[i + 1][limit_weight]) {
-            result_value -= v[i], limit_weight -= w[i];
-            printf("%c:1\n", object[i]);
+            limit_weight -= w[i];
+            printf("%c:1個\n", object[i]);
         } else
-            printf("%c:0\n", object[i]);
+            printf("%c:0個\n", object[i]);
     }
     return 0;
 }
